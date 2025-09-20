@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="style.css" />
-  <title>---</title>
+  <title>Conjuntos</title>
 </head>
 
 <body>
+  <h1>Conjuntos (A/B)</h1>
 
+  <form action="config.php" method="post">
+    <fieldset>
+      <legend>Selecciona</legend>
 
-  <script src="config.php"></script>
+      <label for="ConA">Ingrese el Conjunto A (separado por comas):</label>
+      <input type="text" id="ConA" name="ConA" placeholder="1,2,3,4" required />
+
+      <label for="ConB">Ingrese el Conjunto B (separado por comas):</label>
+      <input type="text" id="ConB" name="ConB" placeholder="1,2,3,4" required />
+
+      <button type="submit" id="calcular">Calcular</button>
+    </fieldset>
+  </form>
 </body>
+
 </html>
