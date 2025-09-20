@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="style.css" />
-  <title>---</title>
+  <title>Fibonacci y Factorial</title>
 </head>
 
 <body>
 
+  <h1>Número de Fibonacci y Factorial</h1>
 
-  <script src="config.php"></script>
+  <form action="config.php" method="post">
+    <fieldset>
+      <legend>Selecciona</legend>
+
+      <label for="numero">Ingrese un número:</label>
+      <input type="number" id="numero" name="numero" required />
+
+      <h2>Elige una opción: </h2>
+      <label for="opcion">Operación:</label>
+      <select id="opcion" name="opcion">
+        <option value="fibonacci">Fibonacci</option>
+        <option value="factorial">Factorial</option>
+      </select>
+
+      <button type="submit" id="calcular">Calcular</button>
+    </fieldset>
+  </form>
 </body>
+
 </html>
