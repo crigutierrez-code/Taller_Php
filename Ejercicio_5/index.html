@@ -7,8 +7,17 @@
 </head>
 
 <body>
-
-
+  <form action="config.php" method="post">
+  <fieldset> <legend>operacion</legend>
+    <label for="numero">Ingrese lo que desea buscar:</label>
+    <input type="text" id="buscar" name="buscar" required />
+    <br>
+    <label for="numero">Ingrese el texto:</label>
+    <input type="text" id="texto" name="texto" required />
+    <br>
+    <button type="submit" id="calcular">buscar</button> 
+  </fieldset> 
+</form>
   <script src="config.php"></script>
 </body>
 </html>
