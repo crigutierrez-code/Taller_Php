@@ -3,11 +3,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ConA = explode(",", $_POST["ConA"]);
     $ConB = explode(",", $_POST["ConB"]);
 
+     echo '<link rel="stylesheet" href="style.css">'; // conecta los estilos
+
     $ConA = array_map('intval', array_map('trim', $ConA));
     $ConB = array_map('intval', array_map('trim', $ConB));
 
     $ConA = array_unique($ConA);
     $ConB = array_unique($ConB);
+
+    echo "<main class='container'>";
+    echo "<h1>Resultados de Conjuntos</h1>";
 
     echo "<h2>Conjuntos ingresados</h2>";
     echo "Conjunto A: {" . implode(", ", $ConA) . "}<br>";
@@ -21,12 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $interseccion = array_intersect($ConA, $ConB);
     echo "A ∩ B = {" . implode(", ", $interseccion) . "}<br>";
 
-    // Diferencias
     echo "<h2>Diferencias</h2>";
     $diferenciaAB = array_diff($ConA, $ConB);
     echo "A - B = {" . implode(", ", $diferenciaAB) . "}<br>";
 
     $diferenciaBA = array_diff($ConB, $ConA);
     echo "B - A = {" . implode(", ", $diferenciaBA) . "}<br>";
+
+    // Botón de regreso
+    echo "<br><a href='index.html' class='btn btn-secondary'>Regresar</a>";
+    echo "</main>";
 }
 ?>
