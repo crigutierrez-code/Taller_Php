@@ -7,8 +7,18 @@
 </head>
 
 <body>
+  <form method="post" action="config.php">
+    <label>Preorden:</label><br>
+    <input type="text" name="preorden" placeholder="Ej: A B D E C"><br>
 
+    <label>Inorden:</label><br>
+    <input type="text" name="inorden" placeholder="Ej: D B E A C"><br>
 
+    <label>Postorden:</label><br>
+    <input type="text" name="postorden" placeholder="Ej: D E B C A"><br>
+
+    <input type="submit" value="Construir Árbol">
+  </form>
   <script src="config.php"></script>
 </body>
 </html>
